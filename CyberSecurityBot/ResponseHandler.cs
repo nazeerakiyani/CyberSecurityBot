@@ -15,11 +15,22 @@ namespace CyberSecurityBot
                 return "I'm doing great! I'm here to help you stay safe online.";
 
             else if (input.Contains("purpose") || input.Contains("what can you do") || input.Contains("what can you tell me"))
-                return "I can teach you about cybersecurity topics like passwords, phishing, scams, and safe browsing.";
+                return "I can teach you about cybersecurity topics like passwords, phishing, scams, safe browsing, 2FA, updates, and VPN.";
 
             else if (input.Contains("cyber") || input.Contains("security"))
                 return "Cybersecurity is about protecting your devices and personal information.";
 
+            // NEW RESPONSES ADDED HERE:
+            else if (input.Contains("2fa") || input.Contains("two factor"))
+                return "2FA adds extra security—use an authenticator app, not SMS when possible.";
+
+            else if (input.Contains("update") || input.Contains("updates"))
+                return "Always keep your software, apps, and OS updated to patch security vulnerabilities.";
+
+            else if (input.Contains("vpn"))
+                return "VPN encrypts your internet connection, hiding your activity from hackers on public WiFi.";
+
+            // YOUR ORIGINAL RESPONSES (UNCHANGED):
             else if (input.Contains("password"))
                 return "Use strong passwords with letters, numbers, and symbols.";
 
@@ -36,7 +47,7 @@ namespace CyberSecurityBot
                 return "A virus is harmful software that can damage your computer.";
 
             else
-                return "I didn’t understand. Try asking about cybersecurity.";
+                return "I didn't understand. Try asking about cybersecurity.";
         }
     }
 }
